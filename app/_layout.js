@@ -3,14 +3,10 @@
 export default function Layout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      {/* Mendaftarkan halaman utama index (Splash Screen) */}
-      <Stack.Screen name="index" />
-      {/* Mendaftarkan halaman login */}
-      <Stack.Screen name="login" />
-      {/* Mendaftarkan halaman home */}
-      <Stack.Screen name="home" />
-      {/* Mendaftarkan halaman detail */}
-      <Stack.Screen name="detail" />
+      <Stack.Screen name="index" options={{ title: 'Login' }} />
+      <Stack.Screen name="home" options={{ title: 'Home' }} />
+      <Stack.Screen name="detail" options={{ title: 'Detail' }} />
+      <Stack.Screen name="about" options={{ title: 'About Us' }} />
     </Stack>
   );
 }

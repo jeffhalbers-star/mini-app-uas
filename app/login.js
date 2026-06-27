@@ -1,39 +1,57 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { useRouter } from 'expo-router';
+ import { useState } from "react";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { router } from "expo-router";
 
 export default function LoginScreen() {
-  const router = useRouter();
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username.trim() === '') {
-      Alert.alert('Error', 'Nama pengguna tidak boleh kosong!');
-    } else {
-      router.replace('/home');
-    }
+    router.replace("/home");
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Selamat Datang</Text>
+      <Text style={styles.title}>Login</Text>
+
       <TextInput
         style={styles.input}
-        placeholder="Masukkan Username Anda"
+        placeholder="Username"
         value={username}
         onChangeText={setUsername}
       />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        secureTextEntry
+        value={password}
+        onChangeText={setPassword}
+      />
+
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>LOGIN</Text>
+        <Text style={styles.buttonText}>Masuk</Text>
       </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, justifyContent: 'center', backgroundColor: '#F3F4F6' },
-  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 30, color: '#1F2937', textAlign: 'center' },
-  input: { backgroundColor: '#fff', padding: 15, borderRadius: 10, marginBottom: 20, borderWidth: 1, borderColor: '#D1D5DB' },
-  button: { backgroundColor: '#4F46E5', padding: 15, borderRadius: 10, alignItems: 'center' },
-  buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
+  container: { flex: 1, padding: 20, justifyContent: "center", backgroundColor: "#F3F4F6" },
+  title: { fontSize: 28, fontWeight: "bold", marginBottom: 20, textAlign: "center" },
+  input: {
+    backgroundColor: "#fff",
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 15,
+    borderWidth: 1,
+    borderColor: "#ddd",
+  },
+  button: {
+    backgroundColor: "#4F46E5",
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+  buttonText: { color: "#fff", fontWeight: "bold" },
 });

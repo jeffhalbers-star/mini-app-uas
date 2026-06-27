@@ -1,43 +1,17 @@
- import React, { useEffect } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+ import { StyleSheet, Text, View, Button } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function Index() {
+export default function LoginScreen() {
   const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.replace('/login');
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>MINI APP</Text>
-      <Text style={styles.subtitle}>Tugas Akhir Pemrograman Mobile</Text>
-      <ActivityIndicator size="large" color="#ffffff" style={{ marginTop: 20 }} />
+      <Text style={styles.title}>Halaman Login</Text>
+      <Button title="Masuk ke Home" onPress={() => router.replace('/home')} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#4F46E5',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  logo: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: '#fff',
-    letterSpacing: 2,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#E0E7FF',
-    marginTop: 10,
-  },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
 });

@@ -1,11 +1,10 @@
-{
+ {
   "expo": {
-    "name": "MiniApp UAS",
-    "slug": "miniapp-uas",
+    "name": "MiniApp",
+    "slug": "mini-app-expo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "miniappuas",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -20,21 +19,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.arum.miniappuas"
+      "package": "com.jeffhalbers.miniappexpo"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "bundler": "metro"
     },
     "plugins": [
       "expo-router"
-    ],
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "e8432eda-5078-4d99-ac24-b6a100b4a7fa"
-      }
-    }
+    ]
   }
 }
