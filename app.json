@@ -1,22 +1,26 @@
 {
   "expo": {
-    "name": "MiniApp",
-    "slug": "MiniApp",
+    "name": "MiniApp UAS",
+    "slug": "miniapp-uas",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "miniappuas",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       },
-      "package": "com.jeffhalbers.MiniApp"
+      "package": "com.arum.miniappuas"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -25,9 +29,11 @@
       "expo-router"
     ],
     "extra": {
-      "router": {},
+      "router": {
+        "origin": false
+      },
       "eas": {
-        "projectId": "c2f4734c-2e04-45e4-9492-52bde533b6a6"
+        "projectId": "e8432eda-5078-4d99-ac24-b6a100b4a7fa"
       }
     }
   }

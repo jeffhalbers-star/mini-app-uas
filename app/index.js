@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+ import React, { useEffect } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -6,7 +6,6 @@ export default function Index() {
   const router = useRouter();
 
   useEffect(() => {
-    // Mengalihkan ke halaman login secara otomatis setelah 3 detik
     const timer = setTimeout(() => {
       router.replace('/login');
     }, 3000);
