@@ -1,4 +1,4 @@
- {
+{
   "expo": {
     "name": "MiniApp",
     "slug": "mini-app-expo",
@@ -26,6 +26,15 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "bd4ed760-8c65-4f3d-a1ef-bbef839c130e"
+      }
+    },
+    "owner": "jeffhalbers"
   }
 }
