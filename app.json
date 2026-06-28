@@ -1,8 +1,9 @@
-{
+ {
   "expo": {
     "name": "MiniApp",
     "slug": "mini-app-expo",
     "version": "1.0.0",
+    "scheme": "miniappexpo",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,7 +20,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jeffhalbers.miniappexpo"
+      "package": "com.arumdev.miniappexpo"
     },
     "web": {
       "bundler": "metro"
@@ -32,9 +33,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "bd4ed760-8c65-4f3d-a1ef-bbef839c130e"
+        "projectId": "c418d4fc-759c-4b8a-9945-07f2d8cf95ba"
       }
     },
-    "owner": "jeffhalbers"
+    "owner": "arumdev"
   }
 }
